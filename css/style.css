@@ -16,6 +16,7 @@ a {
 button {
    padding: 0;
    border: none;
+   background-color: transparent;
 }
 
 ul {
@@ -36,7 +37,8 @@ body {
    font-size: 20px;
    font-weight: 300;
    line-height: 1.5;
-
+   position: relative;
+   
 }
 
 .header__inner {
@@ -48,20 +50,43 @@ body {
 }
 
 .logo {
-   margin-bottom: 25px;
+   margin-bottom: 35px;
 }
+
 .menu__btn {
    display: none;
    width: 40px;
-   height: 18px;
-   
+   height: 20px;
    flex-direction: column;
    justify-content: space-between;
+   position: relative;
+   z-index: 2;
+
+}
+.mobile-nav, .menu__close {
+   display: none;
+   
+}
+.menu--close {
+   display: none;
+   position: absolute;
+   left:0;
+   right: 0;
+   top: 0;
+   bottom: 0; 
+   background-color: rgb(0, 0, 0, .5);
+   z-index: 1;
+   transition: background-color .8s ease-in-out;
+}
+
+.menu--close.menu--open{
+   display: block;
+   
 }
 
 
 .menu__btn span {
-   
+
    background-color: #000;
    height: 2px;
    width: 100%;
@@ -75,6 +100,8 @@ body {
    font-size: 18px;
    font-weight: 400;
    margin-left: 85px;
+   position: relative;
+   z-index: 3;
 }
 
 .user-actions {
@@ -90,7 +117,7 @@ body {
 .top {
    background-image: url(../images/top-bg.jpg);
    background-repeat: no-repeat;
-   background-position: bottom center;
+   background-position: bottom left;
    background-size: cover;
 
 }
@@ -156,30 +183,81 @@ body {
       margin-left: 60px;
    }
 
-   .logo{
+   .logo {
       margin-bottom: 0;
    }
 
    .header__inner {
       min-height: auto;
    }
+
    .blockquote__text {
       margin-top: 120px;
       margin-bottom: 135px;
    }
 }
+
 @media (max-width:860px) {
    .menu__list {
-      display: none;
+      transform: translateY(-100%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 480px;
+      margin: 0 auto;
+      background-color: #fff;
+      display: block;
+      text-align: center;
+      padding-top: 60px;
+      transition: transform .5s ease-in-out;
    }
+   .menu__list.menu__list--open{
+      transform: translateY(0%);
+   }
+
+   .menu__close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+   }
+
+   .menu__item {
+      margin-bottom: 30px;
+      font-size: 24px;
+      font-family: "Cormorant", serif;
+   }
+
+   .mobile-menu {
+      padding-top: 60px;
+      margin: 60px 30px;
+      border-top: 2px solid #F7E3EA;
+
+   }
+
    .menu__btn {
       display: flex;
-      
+
    }
+   .mobile-nav, .menu__close {
+      display: block;
+   }
+
    .menu {
       order: -1;
       margin-right: 0;
    }
+   .mobile-actions {
+      background-color: #F7E3EA;
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 18px;
+   }
+   .mobile-menu__item {
+      margin-bottom: 35px;
+
+   }
+
    .logo {
       margin-left: auto;
       margin-right: 154px;
@@ -193,11 +271,84 @@ body {
       padding-left: 64px;
       padding-right: 64px;
    }
-  
+
+   .blockquote__text {
+      max-width: 640px;
+   }
 
 
 }
 
-@media (max-width:480px) {}
+@media (max-width:680px) {
+   .container {
+      padding-left: 10px;
+      padding-right: 10px;
+   }
 
-@media (max-width:360px) {}
+   .header__inner {
+      padding-right: 0;
+      padding-left: 0;
+   }
+
+   .top__title {
+      font-size: 40px;
+      line-height: normal;
+   }
+
+   .blockquote__text {
+      font-size: 16px;
+      max-width: 376px;
+      margin-top: 60px;
+      margin-bottom: 60px;
+   }
+}
+
+@media (max-width:480px) {
+   .logo {
+      margin-right: 80px;
+   }
+
+   .logo img {
+      width: 40px;
+   }
+   .menu__list {
+      max-width: 360px;
+   }
+
+}
+
+@media (max-width:360px) {
+   .logo {
+      margin-right: 50px;
+   }
+
+   .user-actions__item-search {
+      margin-left: 0;
+   }
+
+   .header__inner {
+      padding: 10px 0;
+
+   }
+
+   .top__title {
+      font-size: 24px;
+      margin-bottom: 10px;
+   }
+
+   .top__text {
+      font-size: 13px;
+      margin-bottom: 30px;
+   }
+
+   .top__inner {
+      min-height: 367px;
+   }
+
+   .blockquote__text {
+
+      max-width: 340px;
+      margin-top: 70px;
+      margin-bottom: 80px;
+   }
+}
