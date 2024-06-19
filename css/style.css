@@ -38,7 +38,7 @@ body {
    font-weight: 300;
    line-height: 1.5;
    position: relative;
-   
+
 }
 
 .header__inner {
@@ -63,25 +63,28 @@ body {
    z-index: 2;
 
 }
-.mobile-nav, .menu__close {
+
+.mobile-nav,
+.menu__close {
    display: none;
-   
+
 }
+
 .menu--close {
    display: none;
    position: absolute;
-   left:0;
+   left: 0;
    right: 0;
    top: 0;
-   bottom: 0; 
+   bottom: 0;
    background-color: rgb(0, 0, 0, .5);
    z-index: 1;
    transition: background-color .8s ease-in-out;
 }
 
-.menu--close.menu--open{
+.menu--close.menu--open {
    display: block;
-   
+
 }
 
 
@@ -103,6 +106,7 @@ body {
    position: relative;
    z-index: 3;
 }
+
 
 .user-actions {
    display: flex;
@@ -150,11 +154,184 @@ body {
 .blockquote__text {
    text-align: center;
    font-family: "Cormorant", serif;
-   font-size: 40px;
+   font-size: clamp(1.25rem, 0.784rem + 1.96vw, 2.5rem);
    font-style: italic;
    font-weight: normal;
    max-width: 704px;
    margin: 150px auto;
+}
+
+.assortment__list {
+   display: flex;
+   justify-content: space-around;
+   gap: 0;
+   flex-wrap: wrap;
+   row-gap: 0px;
+
+}
+
+.assortment__title {
+   margin-top: 50px;
+   text-align: center;
+   font-size: clamp(1.5rem, 1.127rem + 1.57vw, 2.5rem);
+   font-family: "Cormorant", serif;
+   margin-bottom: 60px;
+}
+
+.assortment__name {
+   font-size: 24px;
+   font-family: "Cormorant", serif;
+   color: #151618;
+   text-align: center;
+   padding-top: 10px;
+}
+
+.assortment__img {
+   max-width: 208px;
+   max-height: 208px;
+   width: 100%;
+
+}
+
+.opinion {
+   height: 400px;
+}
+
+.opinion__title {
+   color: #151618;
+   font-size: clamp(1.5rem, 1.127rem + 1.57vw, 2.5rem);
+   font-family: "Cormorant", serif;
+   text-align: center;
+   margin-top: 210px;
+   margin-bottom: 60px;
+}
+
+.swiper {
+   overflow: hidden;
+}
+
+.swiper-wrapper {
+   display: inline-flex;
+}
+
+.opinion-slide__text {
+   max-width: 280px;
+   font-style: italic;
+   font-family: "Open Sans";
+   font-weight: 300;
+}
+
+.opinion-slide__name {
+   font-size: 20px;
+   font-family: "Open Sans";
+   font-weight: 600;
+   padding-top: 10px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+   display: none;
+}
+
+.slider-btn {
+   display: flex;
+   justify-content: space-between;
+
+}
+
+.swiper-button-prev {
+   transform: rotate(180deg);
+}
+
+.tea-blog__container {
+   display: grid;
+   grid: repeat(2, 260px) / auto-flow clamp(31.25rem, 15.625rem + 25vw, 37.5rem);
+
+
+}
+
+.tea-blog__title {
+   font-size: clamp(1.5rem, 1.127rem + 1.57vw, 2.5rem);
+   text-align: center;
+   font-family: "Cormorant", serif;
+   font-weight: 400;
+   color: #151618;
+   margin-bottom: 60px;
+}
+
+.tea-blog__inner {
+   display: flex;
+   max-width: 540px;
+   max-height: 180px;
+   height: 100%;
+   width: 100%;
+   gap: 20px;
+}
+
+.tea-blog__text {
+   font-size: 24px;
+   font-family: "Cormorant", serif;
+   font-weight: 400;
+   max-height: 86px;
+   color: #151618;
+   padding-bottom: 10px;
+}
+
+
+
+.tea-blog__read {
+   font-size: 13px;
+   font-family: "Open Sans";
+   font-weight: 300;
+   position: relative;
+   padding-top: 50px;
+   bottom: 0;
+}
+
+.tea-blog__info {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+}
+
+.tea-blog__btn {
+   border: 1px solid #000;
+   font-size: 20px;
+   font-family: "Open Sans";
+   font-weight: 300;
+   max-width: 150px;
+   height: 50px;
+   margin-top:100px;
+   text-align: center;
+   padding-top: 10px;
+   transition: all .3s;
+}
+.tea-blog__btn:hover {
+   cursor: pointer;
+   background-color: #000;
+   color: white;
+}
+
+
+.more {
+   margin-top: 150px;
+   background-color: #F7F2EA;
+}
+
+.more__title {
+   padding-top: 100px;
+   font-size: 40px;
+   font-family: "Cormorant", serif;
+   color: #151618;
+   
+}
+.more__text {
+   padding-top: 50px;
+   font-size: 20px;
+   font-family: "Open Sans";
+   font-weight: 300;
+   line-height: 2;
+   width: 560px;
 }
 
 
@@ -170,6 +347,31 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*===================================MEDIA=====================================================================================================================
+*/
+@media (max-width:1020px) {
+   .tea-blog__container{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 30px   ;
+   
+   }
+   
+}
 @media (max-width:1000px) {
    .user-actions__item-search {
       margin-left: 30px;
@@ -212,7 +414,8 @@ body {
       padding-top: 60px;
       transition: transform .5s ease-in-out;
    }
-   .menu__list.menu__list--open{
+
+   .menu__list.menu__list--open {
       transform: translateY(0%);
    }
 
@@ -239,7 +442,9 @@ body {
       display: flex;
 
    }
-   .mobile-nav, .menu__close {
+
+   .mobile-nav,
+   .menu__close {
       display: block;
    }
 
@@ -247,12 +452,14 @@ body {
       order: -1;
       margin-right: 0;
    }
+
    .mobile-actions {
       background-color: #F7E3EA;
       display: flex;
       justify-content: space-around;
       margin-bottom: 18px;
    }
+
    .mobile-menu__item {
       margin-bottom: 35px;
 
@@ -276,6 +483,10 @@ body {
       max-width: 640px;
    }
 
+   .swiper-button-next,
+   .swiper-button-prev {
+      display: block;
+   }
 
 }
 
@@ -296,14 +507,43 @@ body {
    }
 
    .blockquote__text {
-      font-size: 16px;
+
       max-width: 376px;
       margin-top: 60px;
       margin-bottom: 60px;
    }
+}  
+@media (max-width:520px) {
+   
+
+   .tea-blog__img {
+     max-width: 190px;
+     max-height: 190px;
+     width: 100%;
+     height: 100%;
+     
+   }
+   .tea-blog__inner {
+      margin-top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 30px;
+   }
+   .tea-blog__info{
+      font-size: 18px;
+   }
 }
 
 @media (max-width:480px) {
+
+   .opinion-slide__text,
+   .opinion-slide__name {
+      text-align: center;
+      margin: 0 auto;
+   }
+
    .logo {
       margin-right: 80px;
    }
@@ -311,8 +551,20 @@ body {
    .logo img {
       width: 40px;
    }
+
    .menu__list {
       max-width: 360px;
+   }
+
+   .assortment__item {
+      flex: 1 160px;
+      max-width: 160px;
+      width: 100%;
+   }
+
+   .assortment__title {
+      /* font-size: 24px; */
+      margin-top: 0;
    }
 
 }
@@ -346,9 +598,9 @@ body {
    }
 
    .blockquote__text {
-
       max-width: 340px;
       margin-top: 70px;
       margin-bottom: 80px;
    }
+
 }
