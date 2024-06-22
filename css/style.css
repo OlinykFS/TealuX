@@ -306,11 +306,12 @@ body {
    margin-top: auto;
 }
 
-.main-blog__item-content{
+.main-blog__item-content {
    display: flex;
    flex-direction: column;
-   
+
 }
+
 .main-blog__item-link::after {
    content: '';
    background-image: url(../images/arrow-read.svg);
@@ -318,9 +319,10 @@ body {
    height: 10px;
    position: absolute;
    margin-left: 6px;
-   bottom:1px;
+   bottom: 1px;
 }
-.main-blog__link{
+
+.main-blog__link {
    display: flex;
    justify-content: center;
    margin: 60px auto 70px;
@@ -329,12 +331,101 @@ body {
    border: solid 1px #151618;
 }
 
+.mailing-list__inner {
+   display: flex;
+   gap: 60px 40px;
+}
 
+.mailing-list {
+   padding: 100px 0;
+   background-color: #F7f2ea;
+   background-image: url(../images/tea.png);
+   background-repeat: no-repeat;
+   background-position: bottom right;
+}
 
+.mailing-list__text {
+   line-height: 1.5;
+   flex-basis: 580px;
+}
 
+.mailing-list__form {
+   display: flex;
+   flex-wrap: wrap;
+   flex-basis: 580px;
+}
 
+.mailing-list__email {
+   font-family: "Open Sans", sans-serif;
+   background-color: rgba(0, 0, 0, 0);
+   border: none;
+   border-bottom: 1px solid #B8B58B;
+   padding: 3px 15px;
+   width: clamp(12.813rem, 5.469rem + 29.38vw, 27.5rem);
+   margin-right: 20px;
+   color: #151618;
+   font-size: 20px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 1.50;
+}
 
+.mailing-list__email::placeholder {
+   font-family: "Open Sans", sans-serif;
+   color: #B8B58B;
+   font-size: 20px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 1.50;
 
+}
+
+.mailing-list__btn {
+   font-family: "Open Sans", sans-serif;
+   font-size: 20px;
+   border: 1px solid #000;
+   padding: 12px 40px;
+   background-color: #fff;
+   font-weight: 300;
+   cursor: pointer;
+}
+
+.mailing-list__label {
+   margin-top: 16px;
+}
+
+.checkbox {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   clip: rect(0, 0, 0, 0);
+   overflow: hidden;
+   padding-left: 20px;
+}
+
+.checkbox__style {
+   position: absolute;
+   width: 10px;
+   height: 10px;
+   border: 1px solid #151618;
+}
+
+.checkbox__text {
+   font-size: 13px;
+   font-weight: 300;
+   padding-left: 20px;
+}
+
+.checkbox:checked + .checkbox__style::before {
+   content: '';
+   position: absolute;
+   width: 6px;
+   height: 6px;
+   background-color: #151618;
+   top: 1px;
+   bottom: 1px;
+   left: 1px;
+}
 
 
 
