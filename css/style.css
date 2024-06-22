@@ -23,6 +23,15 @@ ul {
    list-style: none;
 }
 
+.title {
+   color: #151618;
+   font-size: 40px;
+   font-family: "Cormorant", serif;
+   font-weight: 400;
+   text-align: center;
+   padding-bottom: 50px;
+}
+
 .container {
    max-width: 1240px;
    margin: 0 auto;
@@ -36,7 +45,7 @@ body {
    color: #151618;
    font-size: 20px;
    font-weight: 300;
-   line-height: 1.5;
+   line-height: normal;
    position: relative;
 
 }
@@ -148,7 +157,7 @@ body {
    font-size: 24px;
    margin-bottom: 48px;
    max-width: 560px;
-   line-height: normal;
+
 }
 
 .blockquote__text {
@@ -243,98 +252,82 @@ body {
    transform: rotate(180deg);
 }
 
-.tea-blog__container {
-   display: grid;
-   grid: repeat(2, 260px) / auto-flow clamp(31.25rem, 15.625rem + 25vw, 37.5rem);
-
-
+.mailing-list__title {
+   text-align: left;
 }
 
-.tea-blog__title {
+.opinion {
+
+   margin-top: 150px;
+}
+
+.opinion__title {
+   padding-bottom: 50px;
+}
+
+.assortment__title {
+   padding-bottom: 150px;
+}
+
+.main-blog__title {
+   padding: 50px 0;
    font-size: clamp(1.5rem, 1.127rem + 1.57vw, 2.5rem);
-   text-align: center;
-   font-family: "Cormorant", serif;
-   font-weight: 400;
-   color: #151618;
-   margin-bottom: 60px;
 }
 
-.tea-blog__inner {
+.main-blog__list {
    display: flex;
-   max-width: 540px;
-   max-height: 180px;
-   height: 100%;
-   width: 100%;
-   gap: 20px;
+   flex-wrap: wrap;
+   gap: 40px 58px;
 }
 
-.tea-blog__text {
+.main-blog__item {
+   flex-basis: 542px;
+   display: flex;
+   gap: 0 20px;
+}
+
+.main-blog__item-title {
    font-size: 24px;
    font-family: "Cormorant", serif;
    font-weight: 400;
-   max-height: 86px;
-   color: #151618;
-   padding-bottom: 10px;
+   min-height: 86px;
 }
 
-
-
-.tea-blog__read {
-   font-size: 13px;
-   font-family: "Open Sans";
+.main-blog__item-author {
+   font-family: 'Open Sans';
    font-weight: 300;
-   position: relative;
-   padding-top: 50px;
-   bottom: 0;
+   font-size: 13px;
+   padding-top: 10px;
 }
 
-.tea-blog__info {
+.main-blog__item-link {
+   position: relative;
+   font-size: 13px;
+   margin-top: auto;
+}
+
+.main-blog__item-content{
    display: flex;
    flex-direction: column;
-   justify-content: flex-start;
-}
-
-.tea-blog__btn {
-   border: 1px solid #000;
-   font-size: 20px;
-   font-family: "Open Sans";
-   font-weight: 300;
-   max-width: 150px;
-   height: 50px;
-   margin-top:100px;
-   text-align: center;
-   padding-top: 10px;
-   transition: all .3s;
-}
-.tea-blog__btn:hover {
-   cursor: pointer;
-   background-color: #000;
-   color: white;
-}
-
-
-.more {
-   margin-top: 150px;
-   background-color: #F7F2EA;
-}
-
-.more__title {
-   padding-top: 100px;
-   font-size: 40px;
-   font-family: "Cormorant", serif;
-   color: #151618;
    
 }
-.more__text {
-   padding-top: 50px;
-   font-size: 20px;
-   font-family: "Open Sans";
-   font-weight: 300;
-   line-height: 2;
-   width: 560px;
+.main-blog__item-link::after {
+   content: '';
+   background-image: url(../images/arrow-read.svg);
+   width: 5px;
+   height: 10px;
+   position: absolute;
+   margin-left: 6px;
+   bottom:1px;
 }
-
-
+.main-blog__link{
+   display: flex;
+   justify-content: center;
+   margin: 60px auto 70px;
+   width: 152px;
+   padding: 15px;
+   border: solid 1px #151618;
+}
 
 
 
@@ -362,16 +355,7 @@ body {
 
 /*===================================MEDIA=====================================================================================================================
 */
-@media (max-width:1020px) {
-   .tea-blog__container{
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   gap: 30px   ;
-   
-   }
-   
-}
+
 @media (max-width:1000px) {
    .user-actions__item-search {
       margin-left: 30px;
@@ -397,6 +381,7 @@ body {
       margin-top: 120px;
       margin-bottom: 135px;
    }
+
 }
 
 @media (max-width:860px) {
@@ -503,7 +488,7 @@ body {
 
    .top__title {
       font-size: 40px;
-      line-height: normal;
+
    }
 
    .blockquote__text {
@@ -512,29 +497,10 @@ body {
       margin-top: 60px;
       margin-bottom: 60px;
    }
-}  
-@media (max-width:520px) {
-   
-
-   .tea-blog__img {
-     max-width: 190px;
-     max-height: 190px;
-     width: 100%;
-     height: 100%;
-     
-   }
-   .tea-blog__inner {
-      margin-top: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      margin-bottom: 30px;
-   }
-   .tea-blog__info{
-      font-size: 18px;
-   }
 }
+
+
+
 
 @media (max-width:480px) {
 
