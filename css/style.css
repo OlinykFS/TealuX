@@ -204,6 +204,7 @@ body {
 
 .opinion {
    height: 400px;
+   
 }
 
 .opinion__title {
@@ -228,6 +229,7 @@ body {
    font-style: italic;
    font-family: "Open Sans";
    font-weight: 300;
+   
 }
 
 .opinion-slide__name {
@@ -239,6 +241,7 @@ body {
 
 .swiper-button-next,
 .swiper-button-prev {
+  margin: 10px;
    display: none;
 }
 
@@ -286,11 +289,13 @@ body {
    gap: 0 20px;
 }
 
+
 .main-blog__item-title {
    font-size: 24px;
    font-family: "Cormorant", serif;
    font-weight: 400;
    min-height: 86px;
+   word-wrap: break-word;
 }
 
 .main-blog__item-author {
@@ -416,7 +421,7 @@ body {
    padding-left: 20px;
 }
 
-.checkbox:checked + .checkbox__style::before {
+.checkbox:checked+.checkbox__style::before {
    content: '';
    position: absolute;
    width: 6px;
@@ -427,8 +432,40 @@ body {
    left: 1px;
 }
 
+.prioritise__inner {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   gap: 50px;
+}
 
+.prioritise {
+   margin-top: 150px;
+   margin-bottom: 60px;
+}
 
+.prioritise__item {
+   text-align: center;
+
+}
+
+.prioritise__title {
+   font-size: 40px;
+   font-weight: 300;
+   margin-bottom: 60px;
+}
+
+.prioritise-item__title {
+   font-size: 30px;
+   font-weight: 300;
+   margin-bottom: 10px;
+}
+
+.prioritise__text {
+   font-size: 20px;
+   font-weight: 600;
+   padding-bottom: 30px;
+}
 
 
 
@@ -446,6 +483,19 @@ body {
 
 /*===================================MEDIA=====================================================================================================================
 */
+@media (max-width:1200px) {
+   .main-blog__item-img {
+      width: 230px;
+      height: 153px;
+   }
+
+   .main-blog__list {
+      gap: 10px;
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-row: 20px;
+   }
+}
 
 @media (max-width:1000px) {
    .user-actions__item-search {
@@ -475,7 +525,7 @@ body {
 
 }
 
-@media (max-width:860px) {
+@media (max-width:880px) {
    .menu__list {
       transform: translateY(-100%);
       position: absolute;
@@ -545,7 +595,18 @@ body {
       margin-left: auto;
       margin-right: 154px;
    }
+   .main-blog__list{
+      display: flex;
+      flex-direction: column;
+      margin-left: 60px;
+      margin-right: 60px;
+   }
+   .main-blog__item-img{
 
+   }
+   .main-blog__item{
+      flex-basis: auto;
+   }
 
 }
 
