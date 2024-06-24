@@ -22,7 +22,7 @@ const opinionSwiper = new Swiper(".opinion-slider", {
     prevEl: ".swiper-button-next",
   },
   breakpoints: {
-    992: {
+    1000: {
       slidesPerView: 4,
     },
     662: {
